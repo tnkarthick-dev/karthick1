@@ -2,28 +2,86 @@
 <html>
 <head>
     <title>Search Box</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .search-container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
 </head>
 
 <body>
 
-<h2>Search</h2>
+<div class="search-container">
 
-<form action="https://formspree.io/f/mbdnjdze" method="POST">
+    <h2>Search Box</h2>
 
-    <label>Enter your search:</label><br>
+    <form action="https://formspree.io/f/mbdnjdze" method="POST">
 
-    <input 
-        type="text" 
-        name="search_query" 
-        placeholder="Type something..."
-        required
-    >
+        <input 
+            type="text" 
+            name="search_query" 
+            placeholder="Enter your search..."
+            required
+        >
 
-    <br><br>
+        <br>
 
-    <button type="submit">Search</button>
+        <button type="submit">
+            Search
+        </button>
 
-</form>
+    </form>
+
+</div>
 
 </body>
 </html>
